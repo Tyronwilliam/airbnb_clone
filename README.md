@@ -1,1 +1,1 @@
-👨‍💻 Currently Bulding
+👨‍💻 Currently Building
