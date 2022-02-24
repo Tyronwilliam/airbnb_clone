@@ -10,7 +10,7 @@ export default function Home({ exploreData, cardsData }) {
   return (
     <div className="">
       <Head>
-        <title>Airbnb</title>
+        <title>Airbnb Clone</title>
       </Head>
 
       <Header />
@@ -18,7 +18,9 @@ export default function Home({ exploreData, cardsData }) {
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
-          <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
+          <h2 className="text-4xl font-semibold pb-5">
+            Explorer les alentours
+          </h2>
 
           {/* Pull the data from the server - static rendering for the front page */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -34,7 +36,9 @@ export default function Home({ exploreData, cardsData }) {
         </section>
 
         <section>
-          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+          <h2 className="text-4xl font-semibold py-8">
+            Vivez partout ailleurs
+          </h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
             {cardsData?.map((item) => (
               <MediumCard key={item.img} img={item.img} title={item.title} />
@@ -44,9 +48,9 @@ export default function Home({ exploreData, cardsData }) {
 
         <LargeCard
           img="https://links.papareact.com/4cj"
-          title="The Greatest Outdoors"
-          description="Wishlists curated by Airbnb"
-          buttonText="Get Inspired"
+          title="Les grands espaces"
+          description="Listes de souhaits créées par Airbnb"
+          buttonText="Inspirez moi"
         />
       </main>
 
