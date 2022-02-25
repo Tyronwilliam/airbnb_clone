@@ -11,6 +11,11 @@ export default function Home({ exploreData, cardsData }) {
     <div className="">
       <Head>
         <title>Airbnb Clone</title>
+
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+          rel="stylesheet"
+        />
       </Head>
 
       <Header />

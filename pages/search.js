@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import Maps from "../components/Map";
 function Search({ searchResult }) {
   const router = useRouter();
   // Destructuring
@@ -30,22 +31,25 @@ function Search({ searchResult }) {
             <p className="button">More Filters </p>
           </div>
           <div className="flex flex-col ">
-
-          {searchResult?.map((item, index) => {
-            return (
-              <InfoCard
-              key={index}
-              img={item.img}
-              location={item.location}
-              title={item.title}
-              description={item.description}
-              star={item.star}
-              price={item.price}
-              total={item.total}
-              />
+            {searchResult?.map((item, index) => {
+              return (
+                <InfoCard
+                  key={index}
+                  img={item.img}
+                  location={item.location}
+                  title={item.title}
+                  description={item.description}
+                  star={item.star}
+                  price={item.price}
+                  total={item.total}
+                />
               );
             })}
-            </div>
+          </div>
+        </section>
+
+        <section className="  hidden xl:inline-flex xl:min-w-[600px] mb-10">
+          <Maps searchResult={searchResult} />
         </section>
       </main>{" "}
       <Footer />
