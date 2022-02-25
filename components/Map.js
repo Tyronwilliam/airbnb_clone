@@ -41,7 +41,6 @@ function Maps({ searchResult }) {
                 role="img"
                 className="text-2xl cursor-pointer animate-bounce"
                 aria-label="push-pin"
-                role="img"
                 onClick={() => {
                   setSelectedLocation(result);
                 }}
