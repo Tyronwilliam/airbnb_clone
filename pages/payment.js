@@ -1,12 +1,10 @@
 import React from "react";
 import { ChevronLeftIcon } from "@heroicons/react/outline";
 import Header from "../components/Header";
-import Stripe from "stripe";
 import { useRouter } from "next/router";
 import Image from "next/image";
 function Payment() {
   const router = useRouter();
-  console.log(router.query);
   return (
     <div>
       <Header />
