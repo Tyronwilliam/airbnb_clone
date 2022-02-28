@@ -42,6 +42,8 @@ function Search({ searchResult }) {
                   star={item.star}
                   price={item.price}
                   total={item.total}
+                  startDate={formatedStartDate}
+                  endDate={formatedEndDate}
                 />
               );
             })}

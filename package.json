@@ -19,6 +19,7 @@
     "react-date-range": "^1.4.0",
     "react-dom": "17.0.2",
     "react-map-gl": "^7.0.7",
+    "stripe": "^8.205.0",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {

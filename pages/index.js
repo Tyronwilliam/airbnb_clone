@@ -16,6 +16,7 @@ export default function Home({ exploreData, cardsData }) {
           href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
           rel="stylesheet"
         />
+        <script src="https://js.stripe.com/v3/"></script>
       </Head>
 
       <Header />
