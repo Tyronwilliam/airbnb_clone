@@ -10,7 +10,7 @@ function Search({ searchResult }) {
   // Destructuring
   const { location, startDate, endDate, numberOfGuest } = router.query;
   const formatedStartDate = format(new Date(startDate), "dd MMMM yy");
-  const formatedEndDate = format(new Date(startDate), "dd MMMM yy");
+  const formatedEndDate = format(new Date(endDate), "dd MMMM yy");
   const range = `${formatedStartDate} - ${formatedEndDate} `;
   return (
     <div className="h-screen">

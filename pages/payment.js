@@ -1,19 +1,22 @@
 import React from "react";
 import { ChevronLeftIcon } from "@heroicons/react/outline";
-import Header from "../components/Header";
 import { useRouter } from "next/router";
 import Image from "next/image";
 function Payment() {
   const router = useRouter();
   return (
     <div>
-      <Header />
-
       <div className=" mt-20 max-w-4xl mx-7 lg:flex  lg:mx-auto items-center">
-        <section className="flex flex-col  mb-10 h-[600px] shrink-0 lg:basis-1/2">
+        <section className="flex flex-col  mb-10 h-[600px] shrink-0 lg:basis-1/2 lg:mb-0">
           <div className="flex flex-col justify-between border-b h-64">
             <div className="flex items-center">
-              <ChevronLeftIcon className="h-5 w-5 text-black" />
+              <ChevronLeftIcon
+                className="h-5 w-5 text-black cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push("/search");
+                }}
+              />
               <h1 className="pl-5 font-bold text-2xl">
                 Demande de réservation
               </h1>
@@ -38,7 +41,7 @@ function Payment() {
               </p>
             </div>
           </div>
-          <div className="mt-10">
+          <div className="mt-5">
             <div className="flex border-b h-44">
               <div className="relative basis-1/2 h-40 ">
                 <Image
@@ -67,7 +70,7 @@ function Payment() {
             </div>
           </div>
         </section>
-        <div className="flex flex-col p-5 pb-0 shrink-0 h-[600px] lg:basis-1/2">
+        <section className="flex flex-col px-5 pb-0 shrink-0 h-[600px] lg:basis-1/2 lg:ml-10 lg:border-l">
           <form className="flex flex-col justify-between h-full">
             <div className="flex flex-col">
               <label htmlFor="Email">Email</label>
@@ -82,7 +85,7 @@ function Payment() {
               <input
                 type="number"
                 id="cardInfos"
-                className="border p-2 rounded-t-lg  outline-none appearance-none"
+                className="border p-2 rounded-t-lg  outline-none .arrow-none"
               />
               <div className="flex flex-col lg:flex-row">
                 <input
@@ -93,7 +96,7 @@ function Payment() {
                 <input
                   type="number"
                   placeholder="CVC"
-                  className="border rounded-br-lg p-2 outline-none appearance-none"
+                  className="border rounded-br-lg p-2 outline-none appearance-none lg:w-[210px]"
                 />
               </div>
             </div>
@@ -117,11 +120,17 @@ function Payment() {
                 className="border p-2  rounded-b-lg outline-none appearance-none"
               />
             </div>
-            <button className="bg-blue-400 p-4 rounded-lg text-white font-semibold cursor-pointer">
+            <button
+              className="bg-blue-400 p-4 rounded-lg text-white font-semibold cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push("/");
+              }}
+            >
               Payer
             </button>
           </form>
-        </div>
+        </section>
       </div>
     </div>
   );
